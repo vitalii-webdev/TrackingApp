@@ -6,14 +6,35 @@
 			super(props);
 		}
 
+
+
 		render() {
 
 			var currentTrackNum = this.props.currentTrackNum;
+			var currentAppLang = this.props.currentAppLang;
 
-			return (
-				<div className = "track-result-box"> 
-					{currentTrackNum.eventdescription}
-				</div>
-			);
+			function renderResultBox() {
+
+			if(currentAppLang === 'en') {
+				return (
+					<div className = "track-result-box">
+					<span className='text-bolder'>Track No. : </span> {currentTrackNum.barcode} <br/>
+					<span className='text-bolder'>Location : </span> {currentTrackNum.eventdescription}
+					</div>
+				);
+			} else {
+					return (
+					<div className = "track-result-box">
+					<span className='text-bolder'>Номер отслеживания : </span> {currentTrackNum.barcode} <br/>
+					<span className='text-bolder'>Местоположение : </span> {currentTrackNum.eventdescription}
+					</div>
+				);
+			}
+
+
+			}
+
+
+			return ( renderResultBox()	);
 		}
 	}

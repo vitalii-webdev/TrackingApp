@@ -7,6 +7,167 @@
 
 // Components
 
-.active-link {
-	font-weight: bold;
+
+#app {
+	min-width: 1185px;
+}
+
+.header-box {
+	height: 70px;
+    width: 100%;
+    clear: both;
+    position: relative;
+    background: #f0f0f0;
+    box-shadow: 0px 3px 4px -1px rgba(50, 50, 50, 0.2);
+}
+
+.header-box-inleft {
+	float: left;
+	height: 100%;
+}
+
+.header-box-inright {
+	float: right;
+	height: 100%;
+}
+
+.header-box-inleft ul.header-menu {
+	float: left;
+	list-style: none;
+	width: auto; height: 100%;
+	margin: 0; padding: 0;
+}
+
+.header-box-inright ul.header-menu {
+	float: right;
+	list-style: none;
+	width: auto; height: 100%;
+	margin: 0; padding: 0;
+}
+
+ul.header-menu li {
+	float: left;
+	display: inline-block;
+	width: auto; height: 100%;
+	line-height: 100%;
+}
+
+ul.header-menu li a, ul.header-menu li.header-menu-text {
+	display: inline-block;
+	padding: 0 12.5px 0 12.5px;
+	height: 100%;
+	line-height: 100%;
+	padding-top: 27px;
+}
+
+.active-link, ul.header-menu li a:hover {
+    background: linear-gradient(to bottom, #3498db 0%, #1b7ab9 100%);
+    color: #fff !important;
+    text-decoration: none;
+}
+
+.content-box {
+	width: 100%;
+	height: auto;
+}
+
+h1, h2, h3 {
+	text-align: center;
+    color: #000000;
+    font: 300 22px/22px "Open Sans",sans-serif;
+    padding: 0;
+    margin: 30px 0 25px 40px;
+}
+
+.tracking-form-box {
+	display: block;
+	float: left;
+	width: 530px;
+    background: #fffbf4;
+    border: 1px solid #efefef;
+    padding: 20px 25px;
+    margin: 0 15px;
+}
+
+.track-result-box {
+	display: block;
+	float: left;
+	width: 530px;
+	min-height: 130px;
+    background: #fffbf4;
+    border: 1px solid #efefef;
+    padding: 20px 25px;
+    margin: 0 15px;
+    text-align: left;
+}
+
+.track-result-box .text-bolder {
+	font-weight: bolder;
+}
+
+.tracking-form input[type="text"] {
+	display: block;
+	float: left;
+	width: 400px;
+}
+
+.tracking-form input[type="submit"] {
+	display: block;
+	float: left;
+	padding: 0.8em 1em;
+	margin: 0 0 0 15px;
+}
+
+.tracking-form label {
+	clear: both;
+	display: block;
+	float: left;
+	cursor: pointer;
+}
+
+.tracking-form .lang-checkbox {
+	cursor: pointer;
+}
+
+.arrow-box {
+	float: left;
+	display: block;
+	width: 65px; height: 65px;
+	margin: 35px 0;
+	background: transparent url('./images/arrow-right.png') center center no-repeat;
+	background-size: contain;
+}
+
+.ukrpost-container {
+	width: 1185px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.favourites-button {
+	display: block;
+    float: right;
+    width: 530px;
+    padding: 25px 0 0;
+    margin: 0 15px;
+    text-align: center;
+}
+
+.favourites-button button {
+	display: inline-block;
+	width: 160px; height: auto;
+}
+
+.favourites-list-box {
+	display: block;
+	float: left;
+	width: 1155px;
+    background: #fffbf4;
+    border: 1px solid #efefef;
+    padding: 20px 25px;
+    margin: 25px 15px;
+}
+
+.favourites-button + .favourites-list-box {
+	margin-top: 10px;
 }

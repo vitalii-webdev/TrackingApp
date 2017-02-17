@@ -4,11 +4,11 @@
 
 	var Navigation = () => {
 		return (
-			<div className="top-bar">
-				<div className="top-bar-left">
-					<ul className="menu">
-						<li className="menu-text">
-							Post Tracking Service:
+			<div className="header-box">
+				<div className="header-box-inleft">
+					<ul className="header-menu">
+						<li className="header-menu-text">
+							Post Tracking Service
 						</li>
 						<li>
 							<IndexLink to="/" activeClassName="active-link">Ukrposhta</IndexLink>
@@ -18,10 +18,10 @@
 						</li>
 					</ul>
 				</div>
-				<div className="top-bar-right">
-					<ul className="menu">
-						<li className="menu-text">
-							Testing version
+				<div className="header-box-inright">
+					<ul className="header-menu">
+						<li className="header-menu-text">
+							Alpha build
 						</li>
 					</ul>
 				</div>

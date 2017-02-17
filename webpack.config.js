@@ -29,7 +29,10 @@ module.exports = {
       NPContainer: 'app/components/NPContainer',
       UkrpostContainer: 'app/components/UkrpostContainer',
       TrackSearch: 'app/components/TrackSearch',
-      TrackResult: 'app/components/TrackResult'
+      TrackResult: 'app/components/TrackResult',
+      FavouritesButton: 'app/components/FavouritesButton',
+      FavouriteItem: 'app/components/FavouriteItem',
+      Favourites: 'app/components/Favourites'
     },
     extensions: ['', '.js', '.jsx']
   },
@@ -42,6 +45,10 @@ module.exports = {
         },
         test: /\.jsx?$/,
         exclude: /(node_modules|bower_components)/
+      },
+      {
+        test: /\.(png|jpg)$/,
+        loader: 'url-loader'
       }
     ]
   },

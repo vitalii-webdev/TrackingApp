@@ -6,11 +6,9 @@
 		return (
 				<div>
 					<Navigation/>
-					<div className="row">
-						<div className="columns medium-6 large-4 small-centered">
+						<div className="content-box">
 							{props.children}
 						</div>
-					</div>
 				</div>
 		);
 	};
