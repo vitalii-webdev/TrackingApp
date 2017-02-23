@@ -1,5 +1,6 @@
 	
 	import React from 'react';
+	import moment from 'moment';
 
 	export default class FavouriteItem extends React.Component {
 
@@ -16,24 +17,34 @@
 			event.preventDefault();
 			var textInputVal = this.textInput.value;
 			if (textInputVal.length > 0) {
-				this.props.onRenameSubmit(this.props.barcode, this.textInput.value);
-				textInputVal = '';
+				this.props.onRenameSubmit(this.props.barcode, textInputVal);
+				this.textInput.value = '';
 			}
 		}
 
 		render() {
 
 			return (
-				<div className="favourite-item">
-					<span className="barcode"> {this.props.barcode} </span> 
-					==> 
-					<span className="item-name"> {this.props.itemName} </span>
-					<form onSubmit={this.handleRenameSubmit.bind(this)} >
-						<input type="text" className="favitem-rename-text" placeholder="Enter new name" ref={(input) => { this.textInput = input; }} />
-						<input type="submit" className="favitem-rename-submit button" value="Rename" />
-					</form>
-					<button className="favitem-delete-button button" onClick={this.handleClick.bind(this)}> Delete </button>
-				</div>
+				<tr className="favourite-item-row">
+					<td className="favitem-title-td">
+						<div className='fav-title'>{this.props.barcode}</div>
+						<div className='fav-description'>Имя: {this.props.itemName}</div>
+						<div className='fav-addedtime'> Добавлено: { moment.unix( this.props.addedTime ).format('DD-MM-YYYY HH:mm:ss') }</div>
+						<form onSubmit={this.handleRenameSubmit.bind(this)} >
+							<input type="text" className="favitem-rename-text" placeholder="Enter new name" ref={(input) => { this.textInput = input; }} />
+							<input type="submit" className="favitem-rename-submit button" value="OK" />
+						</form>
+					</td>
+					<td className="favitem-checktime-td">
+						{ moment.unix( this.props.lastCheckTime ).format('DD-MM-YYYY HH:mm:ss') }
+					</td>
+					<td className="favitem-description-td">
+						{ this.props.status }
+					</td>
+					<td className="favitem-delete-td">
+						<button className="favitem-delete-button button" onClick={this.handleClick.bind(this)}> Delete </button>
+					</td>
+				</tr>
 			);
 		}
 	}

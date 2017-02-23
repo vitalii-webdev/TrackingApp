@@ -17,19 +17,26 @@
 
 		render() {
 
-				var favouritesList = [];
+				var favouritesList = this.props.favouritesArray.map((item) => {
+					
+					return (<FavouriteItem key={item.trackcode} barcode={item.trackcode} itemName={item.name} addedTime = {item.addedtime} lastCheckTime = {item.lastchecktime} status = {item.status} onDeleteItem = {this.handleDeleteItem.bind(this)} onRenameSubmit = {this.handleRenameSubmit.bind(this)} />);
+				});
 
-				for (let item of this.props.favouritesMap) {
-					favouritesList.push(
-					<FavouriteItem key={item[0]} barcode={item[0]} itemName={item[1]} onDeleteItem = {this.handleDeleteItem.bind(this)} onRenameSubmit = {this.handleRenameSubmit.bind(this)} />
-					);
-				}
 
 			return (
-				<div className="favourites-list-box">
-					{favouritesList}
-				</div> 
+				<div className="clearfix">
+					<h3> Избранное (сохраняется в браузере) </h3>
+					<table className="favourites-list-table">
+					<thead>
+						<tr> <th>Name</th> <th>Last check date</th> <th>Status</th> <th>Delete</th> </tr>
+					</thead>
+					<tbody>
+						{favouritesList}
+					</tbody>
+					</table>
+				</div>
 			);
 
 		}
 	}
+

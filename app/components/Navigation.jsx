@@ -21,7 +21,7 @@
 				<div className="header-box-inright">
 					<ul className="header-menu">
 						<li className="header-menu-text">
-							Alpha build
+							
 						</li>
 					</ul>
 				</div>

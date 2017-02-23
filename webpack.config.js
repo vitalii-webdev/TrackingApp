@@ -22,17 +22,13 @@ module.exports = {
   },
   resolve: {
     root: __dirname,
+    modulesDirectories: [
+      'node_modules',
+      './app/components',
+      './app/api'
+    ],
     alias: {
-      applicationStyles: 'app/styles/app.scss',
-      Main: 'app/components/Main',
-      Navigation: 'app/components/Navigation',
-      NPContainer: 'app/components/NPContainer',
-      UkrpostContainer: 'app/components/UkrpostContainer',
-      TrackSearch: 'app/components/TrackSearch',
-      TrackResult: 'app/components/TrackResult',
-      FavouritesButton: 'app/components/FavouritesButton',
-      FavouriteItem: 'app/components/FavouriteItem',
-      Favourites: 'app/components/Favourites'
+      applicationStyles: 'app/styles/app.scss'
     },
     extensions: ['', '.js', '.jsx']
   },

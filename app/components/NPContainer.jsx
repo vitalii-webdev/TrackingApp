@@ -7,6 +7,6 @@
 		}
 
 		render() {
-			return (<div> NPContainer component here. </div>);
+			return (<div> Will work soon. </div>);
 		}
 	}
